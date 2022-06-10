@@ -1,0 +1,36 @@
+*{
+  box-sizing: border-box;
+}
+
+ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li{
+  cursor: pointer;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+input{
+  width: 100% ;
+  color: inherit;
+  border : 0 ;
+  padding: 15px 10px;
+  border-radius: 5px;
+}
+
+body{
+  margin: 0;
+  padding  : 0;
+}
