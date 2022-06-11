@@ -9,15 +9,15 @@
 
 <script>
 export default {
-  name: "Boost",
-};
+  name: 'TheBoost'
+}
 </script>
 
 <style lang="scss" scoped>
 
 .boost {
   min-height: 300px;
-  background-image: url(images/boost/bg-boost-mobile.svg);
+  background-image: url(~@/assets/images/boost/bg-boost-mobile.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-color: $boost_bg_color;
@@ -38,7 +38,7 @@ export default {
 
 @media (min-width: 992px) {
   .boost {
-    background-image: url(images/boost/bg-boost-desktop.svg);
+    background-image: url(~@/assets/images/boost/bg-boost-desktop.svg);
   }
 }
 </style>

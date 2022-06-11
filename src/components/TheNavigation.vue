@@ -19,11 +19,11 @@
 </template>
 <script>
 export default {
-  name: "TheNavigation",
+  name: 'TheNavigation',
   props: {
-    activeNav: Boolean,
-  },
-};
+    activeNav: Boolean
+  }
+}
 </script>
 
 <style lang="scss" >

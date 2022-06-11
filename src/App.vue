@@ -1,35 +1,34 @@
 <template>
   <TheHeader />
-  <Featured />
+  <TheFeatured />
   <ShortenLinkAPI />
-  <About />
-  <Boost />
+  <TheAbout />
+  <TheBoost />
   <TheFooter />
 </template>
 
 <script>
-import TheHeaderVue from "./components/TheHeader.vue";
-import FeaturedVue from "./components/Featured.vue";
-import ShortenLinkAPIvue from "./components/ShortenLinkAPI.vue";
-import AboutVue from "./components/About.vue";
-import BoostVue from "./components/Boost.vue";
-import TheFooterVue from "./components/TheFooter.vue";
+import TheHeaderVue from './components/TheHeader.vue'
+import FeaturedVue from './components/TheFeatured.vue'
+import ShortenLinkAPIvue from './components/ShortenLinkAPI.vue'
+import AboutVue from './components/TheAbout.vue'
+import BoostVue from './components/TheBoost.vue'
+import TheFooterVue from './components/TheFooter.vue'
 
 export default {
-  name: "App",
+  name: 'App',
   components: {
     TheHeader: TheHeaderVue,
-    Featured: FeaturedVue,
+    TheFeatured: FeaturedVue,
     ShortenLinkAPI: ShortenLinkAPIvue,
-    About: AboutVue,
-    Boost: BoostVue,
-    TheFooter: TheFooterVue,
-  },
-};
+    TheAbout: AboutVue,
+    TheBoost: BoostVue,
+    TheFooter: TheFooterVue
+  }
+}
 </script>
 
 <style lang="scss">
-@use 'assets/scss/styles' as *;
 
 #app {
   font-family: $font_primary;

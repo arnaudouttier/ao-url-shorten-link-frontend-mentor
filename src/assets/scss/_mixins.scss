@@ -1,41 +1,41 @@
-@mixin hamburger-icon($width,$height,$color) {
+@mixin hamburger-icon($width, $height, $color) {
   width: $width;
   height: $height;
   background-color: $color;
   position: relative;
-  padding : 0;
+  padding: 0;
 
-  &::before ,&::after{
-    content: '';
+  &::before,
+  &::after {
+    content: "";
     position: absolute;
     width: $width;
     height: $height;
-    background-color : $color;
+    background-color: $color;
     left: 0;
   }
 
-  &::before{
-    top : -8px
+  &::before {
+    top: -8px;
   }
 
-    &::after{
-    top : 8px
+  &::after {
+    top: 8px;
   }
-
 }
 
-@mixin about-item-margin {  
+@mixin about-item-margin {
   @for $i from 1 through 3 {
-      &:nth-child(#{$i}){
-        margin-top: 40px * $i;
+    &:nth-child(#{$i}) {
+      margin-top: 40px * $i;
     }
   }
 }
 
 @mixin link-hover($props, $color) {
-  transition: $props .4s ease;
+  transition: $props 0.4s ease;
 
-  &:hover{
-    #{$props} : $color;
+  &:hover {
+    #{$props}: $color;
   }
 }

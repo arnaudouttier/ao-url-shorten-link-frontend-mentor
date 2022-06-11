@@ -17,8 +17,8 @@
 
 <script>
 export default {
-  name: "Featured",
-};
+  name: 'TheFeatured'
+}
 </script>
 
 <style lang="scss" scoped>
@@ -26,7 +26,7 @@ export default {
   display: grid;
   place-items: center;
   margin-bottom: 80px;
-  background-image: url(images/featured/illustration-working.svg);
+  background-image: url(~@/assets/images/featured/illustration-working.svg);
   background-size: contain;
   background-repeat: no-repeat;
   position: relative;

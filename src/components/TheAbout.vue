@@ -11,7 +11,7 @@
       <div class="about-items">
         <div class="about-item">
           <img
-            src="images/about/icon-brand-recognition.svg"
+            src="~@/assets/images/about/icon-brand-recognition.svg"
             alt="about item images"
             class="about-item-image"
           />
@@ -23,7 +23,7 @@
         </div>
         <div class="about-item active-pseudo">
           <img
-            src="images/about/icon-detailed-records.svg"
+            src="~@/assets/images/about/icon-detailed-records.svg"
             alt="about item images"
             class="about-item-image"
           />
@@ -35,7 +35,7 @@
         </div>
         <div class="about-item active-pseudo">
           <img
-            src="images/about/icon-fully-customizable.svg"
+            src="~@/assets/images/about/icon-fully-customizable.svg"
             alt="about item images"
             class="about-item-image"
           />
@@ -52,12 +52,11 @@
 
 <script>
 export default {
-  name: "About",
-};
+  name: 'TheAbout'
+}
 </script>
 
 <style lang="scss" scoped>
-
 .about {
   display: grid;
   place-items: center;
@@ -113,6 +112,7 @@ export default {
       background-color: $about_item_bg_color_before;
     }
   }
+
   img {
     position: absolute;
     top: 0;
@@ -153,6 +153,7 @@ export default {
         width: 30px;
         height: 7px;
       }
+
       &:nth-child(3) {
         &:before {
           top: 37%;

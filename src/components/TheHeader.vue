@@ -1,7 +1,7 @@
 <template>
   <header id="header">
     <div class="header-inner">
-      <img src="images/header/logo.svg" alt="site logo" class="site-logo" />
+      <img src="~@/assets/images/header/logo.svg" alt="site logo" class="site-logo" />
       <div @click="toggleNav" class="nav-icon">
         <button class="hamburger-icon"></button>
       </div>
@@ -11,24 +11,24 @@
 </template>
 
 <script>
-import TheNavigationVue from "./TheNavigation.vue";
+import TheNavigationVue from './TheNavigation.vue'
 
 export default {
-  name: "TheHeader",
+  name: 'TheHeader',
   components: {
-    TheNavigation: TheNavigationVue,
+    TheNavigation: TheNavigationVue
   },
-  data() {
+  data () {
     return {
-      isNavActive: false,
-    };
+      isNavActive: false
+    }
   },
   methods: {
-    toggleNav() {
-      this.isNavActive = !this.isNavActive;
-    },
-  },
-};
+    toggleNav () {
+      this.isNavActive = !this.isNavActive
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped >

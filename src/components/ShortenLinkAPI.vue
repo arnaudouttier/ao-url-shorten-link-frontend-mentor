@@ -46,61 +46,62 @@
 </template>
 
 <script>
-import axios from "axios";
+import axios from 'axios'
 
 export default {
-  name: "ShortenLinkAPI",
-  data() {
+  name: 'ShortenLinkAPI',
+  data () {
     return {
-      originalUrl: "",
-      shortenUrl: "",
+      originalUrl: '',
+      shortenUrl: '',
       userUrls: [],
       isValidUrl: true,
-      urlCopied: "",
+      urlCopied: '',
       isCopied: true,
-      regex: /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/,
-    };
+      // eslint-disable-next-line no-useless-escape
+      regex: /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/
+    }
   },
   methods: {
-    async submitUserUrl() {
-      this.isValidUrl = this.regex.test(this.originalUrl);
+    async submitUserUrl () {
+      this.isValidUrl = this.regex.test(this.originalUrl)
 
       if (this.isValidUrl) {
         try {
           const response = await axios.get(
             `https://api.shrtco.de/v2/shorten?url=${this.originalUrl}`
-          );
-          this.shortenUrl = response.data.result.full_short_link;
+          )
+          this.shortenUrl = response.data.result.full_short_link
         } catch (e) {
-          this.errors.push(e);
+          this.errors.push(e)
         }
 
         const newUserUrl = {
           id: this.userUrls.length,
           UrlOriginal: this.originalUrl,
-          shortenUrl: this.shortenUrl,
-        };
-        this.userUrls.push(newUserUrl);
+          shortenUrl: this.shortenUrl
+        }
+        this.userUrls.push(newUserUrl)
       }
-      this.originalUrl = "";
-      this.shortenUrl = "";
+      this.originalUrl = ''
+      this.shortenUrl = ''
     },
 
-    copyShortenUrl(listIndex, event) {
-      this.urlCopied = this.userUrls[listIndex].shortenUrl;
-      navigator.clipboard.writeText(this.urlCopied);
+    copyShortenUrl (listIndex, event) {
+      this.urlCopied = this.userUrls[listIndex].shortenUrl
+      navigator.clipboard.writeText(this.urlCopied)
 
       if (this.isCopied) {
-        event.target.textContent = "Copied!";
-        event.target.classList.add("activeCopy");
+        event.target.textContent = 'Copied!'
+        event.target.classList.add('activeCopy')
       } else {
-        event.target.textContent = "Copy";
-        event.target.classList.remove("activeCopy");
+        event.target.textContent = 'Copy'
+        event.target.classList.remove('activeCopy')
       }
-      this.isCopied = !this.isCopied;
-    },
-  },
-};
+      this.isCopied = !this.isCopied
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -122,7 +123,7 @@ export default {
 
 .sh-inner {
   border-radius: 10px;
-  background-image: url(images/shorten/bg-shorten-mobile.svg);
+  background-image: url(~@/assets/images/shorten/bg-shorten-mobile.svg);
   background-color: $sh_inner_bg_color;
   background-position-x: 100%;
   background-repeat: no-repeat;
